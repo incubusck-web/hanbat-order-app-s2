@@ -19,3 +19,12 @@ jobs:
 
       - name: "파일 목록 출력"
         run: ls -la
+
+            - name: "태그 생성"
+        id: tag
+        run: |
+          echo "TAG=${GITHUB_SHA::7}" >> $GITHUB_OUTPUT
+
+      - name: "태그 사용"
+        run: |
+          echo "이미지 태그는 ${{ steps.tag.outputs.TAG }} 입니다"
