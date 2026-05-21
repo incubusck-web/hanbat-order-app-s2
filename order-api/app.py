@@ -13,7 +13,7 @@ Phase 2에서 학생이 Retry + Circuit Breaker 를 추가할 예정
 import os
 import time
 
-import httpx
+import httpxz
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 
@@ -97,3 +97,4 @@ async def get_order(order_id: str):
         "payment": payment,
         "total_response_time_ms": elapsed_ms,
     }
+#test
