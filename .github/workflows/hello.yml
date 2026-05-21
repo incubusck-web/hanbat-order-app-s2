@@ -20,7 +20,7 @@ jobs:
       - name: "파일 목록 출력"
         run: ls -la
 
-            - name: "태그 생성"
+      - name: "태그 생성"
         id: tag
         run: |
           echo "TAG=${GITHUB_SHA::7}" >> $GITHUB_OUTPUT
